@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/img_logo.jpeg" type="image/png">
+    <title>Relatórios de Reservas</title>
+    <link rel="stylesheet" href="data.css"> <!-- Link do CSS atualizado -->
+    
+    <style>
+  
+           /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-color: #f4f4f9;
+    overflow-x: hidden; /* Evita barra de rolagem horizontal */
+}
+
+/* Cabeçalho - Header */
+header {
+    background-color: rgba(211, 177, 112, 0.9); /* Fundo claro e um pouco transparente */
+    color: white;
+    text-align: center;
+    padding: 1.0rem;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    margin-top: 0;
+}
+
+/* Navegação - Nav */
+nav {
+    background-color: rgba(211, 177, 112, 0.5); /* Barra semitransparente */
+    padding: 1rem;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Estilo básico para a lista de navegação */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+   gap: 10px; /* Espaçamento entre os itens */
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+/* Estilo para os links de navegação */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border-radius: 0;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #f4f4f9;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+    background-color: #d3b170;
+    color: black;
+    padding: 1rem;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer-content p {
+    margin: 0.5rem 0;
+}
+
+footer a{
+    color:blue;
+}
+
+footer a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+/* Responsividade para tablets e dispositivos menores */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: row; /* Links empilhados em telas menores */
+        gap: 1rem; /* Espaçamento entre os itens */
+    }
+
+    nav ul li {
+        margin: 0.5rem 0; /* Ajuste de espaçamento */
+    }
+
+    nav ul li a {
+        font-size: 0.9rem; /* Tamanho de fonte reduzido */
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+/* Responsividade para celulares menores (480px) */
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: row; /* Empilhar links verticalmente */
+        align-items: center; /* Centralizar os itens */
+        gap: 0.8rem;
+    }
+
+    nav ul li {
+        margin: 0.3rem 0;
+    }
+
+    nav ul li a {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.7rem;
+    }
+
+    header {
+        padding: 0.4rem; /* Reduzir padding no header */
+        font-size: 1rem; /* Ajustar tamanho do texto no header */
+    }
+
+    footer {
+        font-size: 0.9rem; /* Ajustar fonte no rodapé */
+    }
+}
+
+/* Responsividade para celulares muito pequenos (320px) */
+@media (max-width: 320px) {
+    nav ul {
+        gap: 0.5rem; /* Menor espaçamento entre os itens */
+        flex-direction: row; /* Empilhar links verticalmente */
+        align-items: center;
+    }
+
+    nav ul li a {
+        font-size: 0.7rem; /* Tamanho de fonte reduzido */
+        padding: 0.3rem 0.6rem;
+    }
+
+    header {
+        font-size: 0.9rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
+
+/* Ajuste para telas maiores */
+@media (min-width: 1024px) {
+    body {
+        overflow-y: hidden; /* Remove a barra de rolagem vertical */
+    }
+
+    html {
+        overflow-y: hidden; /* Garante que a rolagem seja desativada no PC */
+    }
+}
+
+    </style>
+    <script>
+        // Função para excluir uma reserva
+        function excluirReserva(id) {
+            var linha = document.getElementById(id);
+            linha.parentNode.removeChild(linha);
+        }
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Relatórios de Datas</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="relatorio.html">Relatório</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+            <li><a href="data.html">Data</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contêiner centralizado -->
+    <div class="reservation-container">
+        <h2>Consulta de Data</h2>
+        <form method="get" action="data.jsp">
+            <!-- Campo para Data de Check-in -->
+            <label for="checkin">Data de Check-in:</label>
+            <input type="date" id="checkin" name="checkin" required>
+
+            <!-- Campo para Data de Check-out -->
+            <label for="checkout">Data de Check-out:</label>
+            <input type="date" id="checkout" name="checkout" required>
+
+            <button type="submit">Buscar</button>
+        </form>
+    </div>
+
+    <footer>
+       <p><strong>SPACEROOM HOTEL</strong></p>
+        <p>Endereço: R. Bento Branco de Andrade Filho, 379 - Santo Amaro, São Paulo - SP, 04757-000</p>
+       <p>Contato: +11 937 717 710 | spaceroomhotel@gmail.com</p>
+    </footer>
+
+</body>
+</html>

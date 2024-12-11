@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="img/img_logo.jpeg" type="image/png">
+        <link rel="stylesheet" href="home.css"/>
+        
+        <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+     padding-top: 52px;
+}
+
+header {
+  background-image: url('img/img_hotelmain.jpg'); /* Imagem de fundo do cabeçalho */
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+    padding-top: 200px;
+}
+
+header p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+nav {
+    position: fixed; /* Torna a barra de navegação fixa no topo */
+    top: 0; /* Posiciona a barra de navegação no topo da tela */
+    left: 0;
+    width: 100%; /* Garante que a barra ocupe toda a largura da tela */
+ background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    padding: 15px;
+    z-index: 1000; /* Garante que a barra de navegação fique acima de outros conteúdos */
+}
+
+
+nav ul {
+    list-style: none; /* Remove a lista padrão */
+    display: flex; /* Usa flexbox para disposição horizontal */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 10px; /* Reduz o espaçamento entre os links */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margem */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 5px 8px; /* Reduz o padding ao redor dos links */
+    transition: background-color 0.3s; /* Adiciona transição ao fundo */
+}
+
+nav a:hover {
+      color: #d3b170;
+      background-color: transparent;
+}
+
+section {
+    text-align: center;
+    padding: 50px;
+}
+
+.accommodations {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.accommodation {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center; /* Centraliza o texto dentro de cada cartão */
+}
+
+.accommodation img {
+    width: 100%;
+    height: auto;
+}
+
+.accommodation h2 {
+    padding: 15px;
+    margin: 0;
+    font-size: 1.5em;
+    background-color: #f4f4f4;
+}
+
+.accommodation p {
+    padding: 0 15px 15px;
+}
+
+.btn {
+    display: block;
+    width: 100px;
+    margin: 15px auto;
+    padding: 10px;
+    text-align: center;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #d3b170;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.responsive-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Opcional: adiciona cantos arredondados */
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em; /* Ajusta o tamanho do título em telas menores */
+        padding-top: 150px; /* Ajusta o padding para manter a posição */
+    }
+
+    header p {
+        font-size: 1em; /* Ajusta o tamanho do texto em telas menores */
+    }
+
+    .accommodation {
+        width: 90%; /* Ajusta a largura das acomodações em telas menores */
+    }
+
+    nav ul {
+        flex-direction: row; /* Garante que os itens de navegação fiquem na horizontal */
+        justify-content: space-evenly; /* Distribui igualmente os itens */
+        gap: 10px; /* Diminui ainda mais o espaço entre os links */
+    }
+
+    nav a {
+        font-size: 1em; /* Ajusta o tamanho da fonte dos links em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em; /* Reduz ainda mais o tamanho do título */
+    }
+
+    .btn {
+        width: 80%; /* Aumenta a largura do botão para ocupar mais espaço em telas pequenas */
+    }
+
+    /* Garantir que os links no menu fiquem lado a lado */
+    nav ul {
+        flex-direction: row; /* Itens em linha, não em coluna */
+        justify-content: space-between; /* Distribui o espaço igualmente */
+        gap: 5px; /* Reduz ainda mais o espaço entre os links */
+    }
+
+    nav a {
+        font-size: 1em; /* Ajusta o tamanho dos links */
+        padding: 8px; /* Ajusta o padding para não deixar os links muito grandes */
+    }
+}
+        </style>
+    </head>
+    <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cadastrar.html">Cadastro</a></li>
+                <li><a href="entrar.html">Entrar</a></li>
+                <li><a href="admin.html">Administração</a></li>
+            </ul>
+        </nav>
+        <h1>WELCOME TO SPACEROOM HOTEL</h1>
+        <p>Reserve sua estadia e desfrute de luxo redefinido a preços mais acessíveis.</p>
+    </header>
+
+    <section>
+        <h2>Todos os nossos tipos de quartos incluem café da manhã complementar</h2>
+        <div class="accommodations">
+            <div class="accommodation">
+                <img src="img/img_camahome.jpg" alt="Acomodações Exclusivas">
+                <h2>Acomodações Exclusivas</h2>
+                <p>Nossos quartos são projetados para transportar você em um ambiente feito para o lazer. Tire seu tempo do dia a dia da casa e encontre um paraíso particular para você.</p>
+                <a href="entrar.html" class="btn">EXPLORE</a>
+            </div>
+
+            <div class="accommodation">
+                <img src="img/img_hotelmar.jpg" alt="Acomodações Praianas">
+                <h2>Acomodações Praianas</h2>
+                <p>Amanse a vida na praia! Estar perto do oceano com acesso às infraestruturas praianas garante um estado de espírito relaxado, pronto para descansar e observar o cenário.</p>
+                <a href="entrar.html" class="btn">EXPLORE</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p><strong>SPACEROOM HOTEL</strong></p>
+            <p>Endereço: R. Bento Branco de Andrade Filho, 379 - Santo Amaro, São Paulo - SP, 04757-000</p>
+             <p>Contato: +11 937 717 710 | spaceroomhotel@gmail.com</p>
+        </div>
+    </footer>
+</body>
+</html>

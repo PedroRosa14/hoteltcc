@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/img_logo.jpeg" type="image/png">
+    <title>Login - Administração de Hotéis</title>
+    <link rel="stylesheet" href="admin.css">
+    
+    <style>
+        /* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #f3d177;
+}
+
+
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column; /* Empilha o conteúdo verticalmente */
+    min-height: 100vh; /* Garante que o corpo ocupe 100% da altura da tela */
+    justify-content: space-between; /* Garante que o rodapé vá para a parte inferior */
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    align-items: center; /* Alinha verticalmente os itens */
+    justify-content: space-between; /* Garante que a logo e o título fiquem nas extremidades */
+    padding: 10px 20px; /* Espaçamento interno */
+    background-color: #d3b170; /* Cor de fundo do cabeçalho */
+    color: white; /* Cor do texto */
+    width: 100%; /* Garante que o cabeçalho ocupe toda a largura */
+    flex-wrap: wrap; /* Permite que o conteúdo se ajuste em telas pequenas */
+}
+
+h1#logo {
+    font-size: 28px; /* Tamanho da logo */
+    font-weight: bold;
+    color: #ecf0f1; /* Cor da logo */
+    margin: 0;
+    text-align: left; /* Alinha a logo à esquerda */
+}
+
+/* Título do painel de controle */
+h2 {
+    font-size: 30px; /* Tamanho do título */
+    color: #fff; /* Cor do título */
+    margin: 0;
+    text-align: center; /* Centraliza o texto */
+    flex: 1 1 100%; /* Faz com que o h2 ocupe todo o espaço disponível */
+    display: block; /* Garante que o título seja um bloco e ocupe a linha inteira */
+}
+
+/* Seção de login - centralizando */
+/* Seção de login - centralizando */
+/* Seção de login - centralizando */
+#login {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    flex-direction: column; /* Empilha os itens do formulário */
+    max-width: 400px; /* Reduz a largura máxima do formulário para 400px */
+    width: 100%; /* Garante que o formulário ocupe toda a largura disponível */
+    padding: 2.5rem; /* Espaçamento interno */
+    background-color: #fff; /* Cor de fundo da seção de login */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar destaque */
+    margin: 20px auto; /* Centraliza a seção na tela */
+    margin-top: 60px; /* Adiciona um pequeno espaçamento do topo */
+    margin-bottom: 40px; /* Adiciona um pequeno espaçamento inferior */
+}
+
+
+
+#login h2 {
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 1.5rem; /* Espaçamento abaixo do título */
+    color: #333; /* Cor do título */
+}
+
+/* Estilos para o formulário */
+form label {
+    display: block; /* Faz o label ocupar toda a linha */
+    font-weight: bold; /* Torna o texto do label mais destacado */
+    margin-bottom: 0.5rem; /* Espaçamento abaixo do label */
+    color: #555; /* Cor do texto do label */
+}
+
+form input {
+    width: 100%; /* Os campos de input ocupam toda a largura */
+    padding: 1rem; /* Padding dentro dos campos */
+    margin-bottom: 1rem; /* Espaçamento entre os campos */
+    border: 1px solid #ddd; /* Borda fina */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 1rem; /* Tamanho da fonte do input */
+    color: #333; /* Cor do texto dentro do input */
+}
+
+form input:focus {
+    border-color:  #d3b170; /* Cor da borda ao focar no campo */
+    outline: none; /* Remove o contorno padrão do input */
+}
+
+form button {
+    width: 100%; /* Botão ocupa toda a largura */
+    padding: 1rem; /* Padding dentro do botão */
+    background-color:  #d3b170; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove borda do botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 1.1rem; /* Tamanho da fonte do botão */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+}
+
+form button:hover {
+    background-color: #2980b9; /* Cor de fundo do botão ao passar o mouse */
+}
+
+/* Rodapé */
+footer {
+    background-color: #d3b170; /* Cor de fundo do footer */
+    color: black; /* Cor do texto */
+    padding: 1rem; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    width: 100%; /* Garante que o rodapé ocupe a largura total */
+    margin-top: auto; /* Faz o rodapé se posicionar automaticamente no fundo */
+}
+
+footer p {
+    font-size: 0.9rem; /* Tamanho da fonte do rodapé */
+    margin: 0;
+}
+
+/* Responsividade para telas menores que 768px */
+@media (max-width: 768px) {
+    #login {
+        max-width: 90%; /* Aumenta a largura máxima do formulário */
+        padding: 1.5rem; /* Reduz o padding */
+    }
+}
+
+/* Responsividade para telas menores que 480px */
+@media (max-width: 480px) {
+    #login {
+        max-width: 100%; /* O formulário ocupa toda a largura da tela */
+        padding: 1rem; /* Diminui o padding para telas muito pequenas */
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+   
+         <!-- Título centralizado -->
+         <h2>Painel de Administração do Hotel</h2>
+        <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+           
+        </ul>
+    </nav>
+         
+    </header>
+        
+    <section id="login">
+        <h3>Login</h3>
+        <form action="admin.jsp" method="post">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+
+            <button type="submit">Entrar</button>
+        </form>
+    </section>
+
+    <footer>
+       <div class="footer-content">
+            <p><strong>SPACEROOM HOTEL</strong></p>
+            <p>Endereço: R. Bento Branco de Andrade Filho, 379 - Santo Amaro, São Paulo - SP, 04757-000</p>
+            <p>Contato: +11 937 717 710 | spaceroomhotel@gmail.com</p>
+        </div>
+    </footer>
+
+</body>
+</html>

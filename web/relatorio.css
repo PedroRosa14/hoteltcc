@@ -1,0 +1,152 @@
+
+   * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+   }
+/* Centralizar o conteúdo */
+  body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100vh;
+      background-color: #f4f4f9;
+  }
+
+  header {
+      background-color: rgba(211, 177, 112, 0.9); /* Título com fundo claro e um pouco transparente */
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      position: relative; /* Permite que o título fique acima da navegação */
+      z-index: 2; /* Coloca o título acima da barra de navegação */
+  }
+
+ nav {
+      background-color: rgba(211, 177, 112, 0.5); /* Barra de navegação semitransparente */
+      padding: 1rem;
+      position: relative;
+      z-index: 1;
+  }
+
+  nav ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+  }
+
+  nav ul li {
+      margin: 0 1rem;
+  }
+
+  nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+  }
+
+  nav ul li a:hover {
+      color: #f4f4f9;
+  }
+
+  /* Centralizar o formulário */
+  .form-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 2rem;
+      margin-top: 20px;
+  }
+
+  form {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+  }
+
+  input[type="text"] {
+      padding: 10px;
+      width: 80%;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+  }
+
+  button {
+      background-color: #d3b170;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  }
+
+  button:hover {
+      background-color: #2980b9;
+  }
+
+  footer {
+      background-color: #d3b170;
+      text-align: center;
+      color: black;
+      padding: 20px;
+      margin-top: auto;
+  }
+
+  /* Responsividade para dispositivos móveis */
+  @media (max-width: 600px) {
+      header h1 {
+          font-size: 20px;
+      }
+
+      nav ul {
+          flex-direction: row; /* Fica na horizontal */
+          justify-content: space-around; /* Espaça os itens igualmente */
+      }
+
+      nav ul li {
+          margin: 0.5rem; /* Ajusta a margem */
+      }
+
+      .form-container {
+          padding: 1rem;
+      }
+
+      form {
+          width: 90%;
+          padding: 1.5rem;
+      }
+
+      button {
+          padding: 12px 18px;
+          font-size: 14px;
+      }
+
+      .message {
+          font-size: 14px;
+      }
+  }
+
+  /* Responsividade para tablets */
+  @media (max-width: 768px) {
+      form {
+          width: 80%;
+      }
+
+      button {
+          padding: 12px 24px;
+          font-size: 16px;
+      }
+  }

@@ -1,0 +1,177 @@
+
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: rgba(211, 177, 112, 0.9);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        /* Barra de navegação */
+        nav {
+            background-color: rgba(211, 177, 112, 0.5);
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px; /* Espaçamento entre os itens */
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #f4f4f9;
+        }
+
+        /* Formulário de busca */
+        .reservation-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            margin-top: 20px;
+            flex-grow: 1;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 80%;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #d3b170;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #d3b170;
+            color: black;
+            padding: 1rem;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .footer-content p {
+            margin: 0.5rem 0;
+        }
+
+        /* Responsividade para dispositivos médios (760px e abaixo) */
+        @media (max-width: 760px) {
+            nav ul {
+                gap: 8px;
+                 flex-direction: row;
+                align-items: center; /* Links centralizados */
+            }
+
+            nav ul li a {
+                font-size: 0.9rem;
+                padding: 0.4rem 0.8rem;
+            }
+
+            form input[type="text"] {
+                width: 90%; /* Mais espaço no campo */
+            }
+
+            button {
+                width: 90%; /* Botão responsivo */
+            }
+
+            .footer-content p {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Responsividade para dispositivos pequenos (480px e abaixo) */
+        @media (max-width: 480px) {
+            nav ul {
+                flex-direction: row;
+                align-items: center; /* Links centralizados */
+            }
+
+            nav ul li a {
+                font-size: 0.85rem;
+                padding: 0.3rem 0.6rem;
+            }
+
+            form {
+                padding: 1.5rem;
+            }
+
+            form input[type="text"], button {
+                width: 100%; /* Campo e botão ocupam toda a largura */
+            }
+
+            header h1 {
+                font-size: 1.2rem; /* Título menor */
+            }
+
+            footer {
+                font-size: 0.85rem;
+            }
+        }
+
+        /* Responsividade para dispositivos muito pequenos (320px e abaixo) */
+        @media (max-width: 320px) {
+            header h1 {
+                font-size: 1rem;
+            }
+
+            nav ul li a {
+                font-size: 0.8rem;
+                padding: 0.2rem 0.5rem;
+            }
+
+            .footer-content p {
+                font-size: 0.75rem;
+            }
+        }

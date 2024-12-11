@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="check.css"/>
+    <link rel="icon" href="img/img_logo.jpeg" type="image/png">
+    <title>Reserva de Quarto</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: url('img/img_cozinhahotel.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 60px; /* Espaço extra para o footer */
+        }
+
+        header {
+            background-color: rgba(211, 177, 112, 0.9);
+            padding: 5px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex-wrap: wrap; /* Permite que os itens se ajustem em telas pequenas */
+        }
+
+        .header-logo h1 {
+            font-size: 20px;
+            color: white;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 10px;
+            padding-left: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #f3d177;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 100%;
+            max-width: 450px;
+            margin: 30px auto;
+            overflow: hidden;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        label {
+            display: block;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        select, input[type="text"], input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #f3d177;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #fff;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #e0be5d;
+        }
+
+        footer {
+            background-color: #d3b170;
+            color: black;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin-bottom: 5px;
+            font-size: 12px;
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 5px 15px;
+            }
+
+            .header-logo h1 {
+                font-size: 18px;
+            }
+
+            nav ul {
+                flex-direction: row;
+                gap: 10px;
+                margin-top: 0;
+            }
+
+            .container {
+                width: 90%;
+                padding: 15px;
+                margin: 20px auto;
+            }
+
+            footer {
+                font-size: 12px;
+                padding: 8px;
+            }
+        }
+
+        /* Responsividade para iPhone 5 e outras telas pequenas */
+        @media (max-width: 480px) {
+            header {
+                flex-direction: row; /* Garante que os links fiquem ao lado do título */
+                justify-content: space-between;
+                padding: 5px 10px;
+            }
+
+            .header-logo h1 {
+                font-size: 16px;
+            }
+
+            nav ul {
+                gap: 5px;
+                font-size: 11px;
+                padding-left: 0;
+            }
+
+            .container {
+                padding: 12px;
+            }
+
+            select, input[type="text"], input[type="date"] {
+                font-size: 12px;
+                padding: 8px;
+            }
+
+            button {
+                padding: 8px;
+                font-size: 12px;
+            }
+
+            footer {
+                font-size: 9px;
+                padding: 5px;
+            }
+
+            footer p {
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-logo">
+        <h1>SPACEROOM HOTEL</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="quartos.html">Quartos</a></li>
+            <li><a href="check.html">Check-in e Check-out</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+    <h1>Faça sua Reserva</h1>
+    <form action="check.jsp" method="POST">
+        
+        <div>
+            <label for="id_cliente">ID do Cliente:</label>
+            <input type="number" id="id_cliente" name="id_cliente" required min="1" inputmode="numeric" title="O ID do cliente deve ser um número positivo" size="200">
+        </div>
+
+
+        <div>
+            <label for="quarto_id">Quarto:</label>
+            <select id="quarto_id" name="quarto_id" required>
+                <option value="1">Quarto 101</option>
+                <option value="2">Quarto 102</option>
+                <option value="3">Quarto 103</option>
+                <option value="4">Quarto 104</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="checkin">Data de Check-in:</label>
+            <input type="date" id="checkin" name="checkin" required>
+        </div>
+
+        <div>
+            <label for="checkout">Data de Check-out:</label>
+            <input type="date" id="checkout" name="checkout" required>
+        </div>
+
+        <button type="submit">Reservar</button>
+    </form>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <p><strong>SPACEROOM HOTEL</strong></p>
+        <p>Endereço: R. Bento Branco de Andrade Filho, 379 - Santo Amaro, São Paulo - SP, 04757-000</p>
+         <p>Contato: +11 937 717 710 | spaceroomhotel@gmail.com</p>
+    </div>
+</footer>
+
+</body>
+</html>

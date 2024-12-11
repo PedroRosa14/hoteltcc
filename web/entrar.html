@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Entrar</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="img/img_logo.jpeg" type="image/png">
+        
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Arial, sans-serif;
+            }
+
+            body {
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                background-color: #f4f4f4;
+            }
+
+            header {
+                position: relative;
+                width: 100%;
+                height: 100vh;
+            }
+
+            .header-img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .header-content {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                color: white;
+                z-index: 2;
+            }
+
+            header nav {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.3);
+                z-index: 10;
+                padding: 10px 0;
+                text-align: center;
+                height: 40px;
+                display: flex;
+                justify-content: center; /* Alinha os links horizontalmente */
+                gap: 30px; /* Adiciona espaçamento entre os links */
+            }
+
+            header nav a {
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+                font-size: 16px;
+            }
+
+            header nav a:hover {
+                color: #d3b170;
+            }
+
+            .form-section {
+                position: absolute;
+                top: 30%;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: white;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                width: 80%;
+                max-width: 450px;
+                min-width: 300px;
+                text-align: center;
+                z-index: 2;
+            }
+
+            .form-section h2 {
+                margin-bottom: 20px;
+            }
+
+            form label {
+                display: block;
+                margin-bottom: 10px;
+                font-size: 16px;
+            }
+
+            form input {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 20px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+
+            button {
+                background-color: #333;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                width: 50%;
+            }
+
+            button:hover {
+                background-color: #555;
+            }
+
+            footer {
+                background-color: #d3b170;
+                color: black;
+                padding: 20px;
+                text-align: center;
+                margin-top: auto;
+            }
+
+            footer p {
+                margin-bottom: 10px;
+            }
+
+            .footer-content {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            /* Media Queries para Responsividade */
+            @media (max-width: 768px) {
+                .form-section {
+                    width: 90%;
+                }
+
+                header nav {
+                    flex-direction: row; /* Garante que os links permaneçam na mesma linha */
+                    gap: 20px; /* Ajuste o espaçamento entre os links */
+                }
+
+                header nav a {
+                    margin: 0; /* Remove margens extras para links */
+                }
+            }
+
+            @media (max-width: 480px) {
+                .form-section {
+                    padding: 20px;
+                }
+
+                button {
+                    padding: 8px 16px;
+                    font-size: 14px;
+                    width: 60%;
+                }
+
+                header nav a {
+                    font-size: 14px;
+                }
+
+                header .header-content h1 {
+                    font-size: 1.8em;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="img/img_hotelfazenda.jpg" alt="Vista do hotel com piscina" class="header-img">
+            <div class="header-content">
+                <h1>SPACEROOM HOTEL</h1>
+                <nav>
+                    <a href="index.html">Home</a>
+                    <a href="cadastrar.html">Cadastro</a>
+                    <a href="entrar.html">Entrar</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="form-section">
+                <h2>Entrar</h2>
+                <form method="post" action="entrar.jsp">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" required>
+
+                    <button type="submit">Entrar</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p><strong>SPACEROOM HOTEL</strong></p>
+                <p>Endereço: R. Bento Branco de Andrade Filho, 379 - Santo Amaro, São Paulo - SP, 04757-000</p>
+                <p>Contato: +11 937 717 710 | spaceroomhotel@gmail.com</p>
+            </div>
+        </footer>
+    </body>
+</html>

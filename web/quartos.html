@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/img_logo.jpeg" type="image/png">
+    <title>Quartos e Tarifas</title>
+    <link rel="stylesheet" href="quartos.css">
+    <style>
+        /* Estilo para os links dentro dos botões */
+        .button a {
+            color: inherit;  /* Remove a cor do link e herda a cor do elemento pai */
+            text-decoration: none;  /* Remove o sublinhado do link */
+        }
+
+        /* Outros estilos do botão */
+        .button {
+            background-color: #f3d177;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #e0be5d;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Quartos e Tarifas</h1>
+    </header>
+
+    <div class="container">
+        <div class="room">
+            <img src="img/quarto_individual.jpeg" alt="Quarto Individual">
+            <h3>Quarto Individual</h3>
+            <p>Perfeito para viajantes individuais.</p>
+            <p class="price">R$200/noite</p>
+            <button class="button"><a href="tipoquartos.jsp">Reservar</a></button>
+        </div>
+        <div class="room">
+            <img src="img/img_camacasal.jpg" alt="Quarto de Casal">
+            <h3>Quarto de Casal</h3>
+            <p>Ideal para casais.</p>
+            <p class="price">R$300/noite</p>
+            <button class="button"><a href="tipoquartos.jsp">Reservar</a></button>
+        </div>
+        <div class="room">
+            <img src="img/quarto_duplo.png" alt="Quarto Duplo">
+            <h3>Quarto Duplo</h3>
+            <p>Confortável para duas pessoas.</p>
+            <p class="price">R$350/noite</p>
+            <button class="button"><a href="tipoquartos.jsp">Reservar</a></button>
+        </div>
+        <div class="room">
+            <img src="img/quarto_deluxe.jpg" alt="Quarto Deluxe">
+            <h3>Quarto Deluxe</h3>
+            <p>Experiência de luxo.</p>
+            <p class="price">R$500/noite</p>
+            <button class="button"><a href="tipoquartos.jsp">Reservar</a></button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p><strong>SPACEROOM HOTEL</strong></p>
+            <p>Endereço: R. Bento Branco de Andrade Filho, 379 - Santo Amaro, São Paulo - SP, 04757-000</p>
+             <p>Contato: +11 937 717 710 | spaceroomhotel@gmail.com</p>
+        </div>
+    </footer>
+</body>
+</html>

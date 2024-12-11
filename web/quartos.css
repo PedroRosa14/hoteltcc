@@ -1,0 +1,123 @@
+header {
+    background-image: url('img/img_principalroom.webp'); /* Substitua pelo caminho da imagem do cabeçalho */
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.room {
+    width: 23%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.room:hover {
+    transform: translateY(-10px);
+}
+
+.room img {
+    width: 100%;
+    height: auto;
+    border-bottom: 4px solid #ffba00;
+}
+
+.room h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.room p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.room .price {
+    font-weight: bold;
+    margin: 10px 0;
+    color: #000;
+}
+
+.button {
+    background-color: #ffba00;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #e0a800;
+}
+
+footer {
+    background-color: #d3b170;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 1024px) {
+    .room {
+        width: 30%; /* Ajusta a largura para telas menores */
+    }
+}
+
+@media (max-width: 768px) {
+    .room {
+        width: 45%; /* Aumenta a largura para telas ainda menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .room {
+        width: 90%; /* Ajusta a largura para 90% em dispositivos móveis */
+    }
+
+    header h1 {
+        font-size: 2em; /* Reduz o tamanho da fonte do cabeçalho */
+    }
+}
